@@ -4,6 +4,7 @@ html{
     scroll-behavior:smooth !important;
 }
 
+
 #background-video{
     width: 100%;
 }
@@ -17,3 +18,47 @@ html{
         width: 0px;
       }
 
+
+/* Animations for popup */
+.popUpInit{
+    display: none;
+    transform: rotate(-100deg);
+}
+
+.popUpOpen {
+	animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+.popUpClose {
+	animation: swing-in-top-bwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+  @keyframes swing-in-top-fwd {
+    0% {
+      
+        transform: rotateX(-100deg);
+        transform-origin: top;
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(0deg);
+        transform-origin: top;
+        opacity: 1;
+    }
+  }
+
+  @keyframes swing-in-top-bwd {
+    0% {
+      
+        transform: rotateX(0deg);
+        transform-origin: top;
+        opacity: 1;
+        z-index: 1;
+    }
+    100% {
+        transform: rotateX(-100deg);
+        transform-origin: top;
+        opacity: 0;
+        z-index: -1;
+    }
+  }
+  

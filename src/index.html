@@ -22,9 +22,9 @@
                 <div class="w-[20%] h-[100%] text-3xl font-bold tracking-wide flex items-center -translate-y-1">stripe</div>
                 <div class="w-[40%]">
                     <ul class="flex w-[100%] h-[100%] justify-between text-lg font-semibold items-center">
-                        <li><a href="">Products</a></li>
+                        <li id="productsLink" class="cursor-pointer hover:text-neutral-400">Products</li>
                         <!-- product popup -->
-                        <div id="productsPopUp" class="grid grid-cols-3 bg-neutral-300 rounded-lg absolute top-20 left-40 w-[70vw] p-1">
+                        <div id="productsPopUp" class="grid grid-cols-3 bg-neutral-200 rounded-lg absolute z-10 top-20 left-40 w-[70vw] p-1 popUpInit">
                             <div class="grid grid-cols-1 grid-rows-5 p-1 col-span-1 rounded-lg gap-y-1">
                                 <div class="row-span-1 rounded-md p-1  hover:bg-neutral-100"><a href="#globalSection" class="h-[100%]">
                                     <div>
@@ -253,8 +253,81 @@
                                 </div>
                             </div>
                         </div>
-                        <li><a href="">Solutions</a></li>
-                        <li><a href="">Developers</a></li>
+                        <li id="solutionLink" class="cursor-pointer hover:text-neutral-400">Solutions</a></li>
+                        <!-- solution PopUp -->
+                        <div id="solutionPopUp" class="grid grid-cols-1 grid-rows-5 gap-y-2 bg-neutral-200 rounded-lg absolute z-10 top-20 left-96 w-[40vw] p-2 shadow-lg shadow-neutral-700/50 popUpInit">
+                            <div class="row-span-3 bg-neutral-100 p-2 rounded-lg shadow-lg shadow-neutral-700/20 ">
+                                <p class="text-neutral-500 mb-4 text-sm">Use Cases</p>
+                                <div class="grid grid-cols-2 px-4">
+                                    <div class="grid grid-cols-1 col-span-1 grid-rows-4 gap-y-4 mb-4">
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Ecommerce</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-brands fa-bitbucket"></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Saas</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-rotate"></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Marketplace</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-shop"></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Embedded Finance</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-chart-pie"></i></span></div>
+
+                                    </div>
+                                    <div class="grid grid-cols-1 col-span-1 grid-rows-4 gap-y-4 mb-4">
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Platform</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-layer-group"></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Creator Economy</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-lightbulb"></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Crypto</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-wallet"></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Global Business</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-earth-asia"></i></span></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-span-2 bg-neutral-100 p-2 rounded-lg shadow-lg shadow-neutral-700/20">
+                                <p class="text-neutral-500 mb-4 text-sm">INTEGRATIONS & CUSTOM SOLUTIONS</p>
+                                <div class="grid grid-cols-2 px-4 pb-4">
+                                    <div class="grid grid-cols-1 col-span-1 grid-rows-2 gap-y-4 mb-4">
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">App Marketplace</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-square-plus"></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">professional services</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-comments"></i></span></div>
+                                    </div>
+                                    <div class="grid grid-cols-1 col-span-1 grid-rows-2 gap-y-4 mb-4">
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Partner Ecosystem</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-book"></i></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <li id="developerLink" class="cursor-pointer hover:text-neutral-400">Developers</li>
+                        <!-- Developer Popup -->
+                        <div id="developerPopUp" class="grid grid-cols-1 grid-rows-3 gap-y-2 bg-neutral-200 rounded-lg absolute z-10 top-20 left-96 w-[40vw] p-2 shadow-lg shadow-neutral-700/50 popUpInit">
+                            <div class="row-span-2 bg-neutral-100 p-2 rounded-lg shadow-lg shadow-neutral-700/20 ">
+                                <div class="py-2 px-3 mb-4">
+                                    <div class="flex flex-row-reverse justify-end peer">
+                                        <span class="peer text-neutral-800 text-md"><a href="">Documentation</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-book-open-reader"></i></span>
+                                    </div>
+                                    <p class="text-neutral-500 text-sm peer-hover:text-neutral-800">Start Integrating Stripe's products and tools</p>
+                                </div>
+                                <div class="grid grid-cols-2 px-4">
+                                    <div class="grid grid-cols-1 col-span-1 grid-rows-5 gap-y-4 mb-4 text-sm text-neutral-700">
+                                        <p class="text-neutral-600">Get Started</p>
+                                        <p class="hover:text-neutral-900 hover:font-medium"><a href="">Prebuilt Checkout</a></p>
+                                        <p class="hover:text-neutral-900 hover:font-medium"><a href="">Libraries & SDKs</a></p>
+                                        <p class="hover:text-neutral-900 hover:font-medium"><a href="">PlugIns</a></p>
+                                        <p class="hover:text-neutral-900 hover:font-medium"><a href="">Code Samples</a></p>
+                                    </div>
+                                    <div class="grid grid-cols-1 col-span-1 grid-rows-5 gap-y-4 mb-4 text-sm text-neutral-700">
+                                        <p class="text-neutral-600">GUIDES</p>
+                                        <p class="hover:text-neutral-900 hover:font-medium"><a href="">Accept online payments</a></p>
+                                        <p class="hover:text-neutral-900 hover:font-medium"><a href="">Manage subscriptions</a></p>
+                                        <p class="hover:text-neutral-900 hover:font-medium"><a href="">Send payments</a></p>
+                                        <p class="hover:text-neutral-900 hover:font-medium"><a href="">Set up in-person payments</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-span-1 bg-neutral-100 p-2 rounded-lg shadow-lg shadow-neutral-700/20 py-4">
+                                <div class="grid grid-cols-2 px-4 pb-4">
+                                    <div class="grid grid-cols-1 col-span-1 grid-rows-2 gap-y-4 mb-4">
+                                        <div class="flex flex-row-reverse justify-end text-md"><span class="peer text-neutral-800"><a href="">Full API Reference</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-boxes-stacked"></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-md"><span class="peer text-neutral-800"><a href="">API status</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-wave-square"></i></span></div>
+                                    </div>
+                                    <div class="grid grid-cols-1 col-span-1 grid-rows-2 gap-y-4 mb-4">
+                                        <div class="flex flex-row-reverse justify-end text-md"><span class="peer text-neutral-800"><a href="">API Changelog</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-code"></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-md"><span class="peer text-neutral-800"><a href="">Build a stripe app</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-clone"></i></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <li><a href="">Resources</a></li>
                         <li><a href="">Pricing</a></li>
                     </ul>
@@ -269,7 +342,10 @@
         </div>
         
         
-        
+        <script src="/src/js/index.js" async defer></script>
+        <script src="/src/js/productPop.js" async defer></script>
+        <script src="/src/js/solutionPop.js" async defer></script>
+        <script src="/src/js/developerPop.js" async defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     </body>
 </html>
