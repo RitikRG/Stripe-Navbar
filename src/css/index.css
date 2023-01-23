@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,600&display=swap');
+
+html{
+    scroll-behavior:smooth !important;
+}
+
+#background-video{
+    width: 100%;
+}
+#bgContainer{
+    clip-path: polygon(0 0, 100% 0%, 100% 26%, 0 52%);
+}
+#signBtn{
+    background-color: rgba(242, 242, 242, 0.4);
+}
+#productSideDiv::-webkit-scrollbar {
+        width: 0px;
+      }
+

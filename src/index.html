@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/dist/output.css" rel="stylesheet">
+        <link rel="stylesheet" text="text/CSS" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link href="/src/css/index.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="w-full h-full">
+            <div class="w-[100%] h-[100vh] fixed top-0 -z-10 " id="bgContainer">
+                <video id="background-video" autoplay loop muted>
+                    <source src="/assets/primarybg.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div id="pcNavbar" class="w-[100vw] flex justify-between px-20 py-4 text-white">
+                <div class="w-[20%] h-[100%] text-3xl font-bold tracking-wide flex items-center -translate-y-1">stripe</div>
+                <div class="w-[40%]">
+                    <ul class="flex w-[100%] h-[100%] justify-between text-lg font-semibold items-center">
+                        <li><a href="">Products</a></li>
+                        <!-- product popup -->
+                        <div id="productsPopUp" class="grid grid-cols-3 bg-neutral-300 rounded-lg absolute top-20 left-40 w-[70vw] p-1">
+                            <div class="grid grid-cols-1 grid-rows-5 p-1 col-span-1 rounded-lg gap-y-1">
+                                <div class="row-span-1 rounded-md p-1  hover:bg-neutral-100"><a href="#globalSection" class="h-[100%]">
+                                    <div>
+                                        <p class="text-neutral-900 text-md font-semibold">Global Payments</p>
+                                        <p class="text-neutral-500 font-medium text-sm text-justify">Accept payment Online, in person or through your platform</p>
+                                    </div>
+                                </div></a>
+                                <div class="row-span-1 rounded-md p-1  hover:bg-neutral-100"><a href="#revenueSection" >
+                                    <div >
+                                        <p class="text-neutral-900 text-md font-semibold">Revenue And Financial Management</p>
+                                        <p class="text-neutral-500 font-medium text-sm ">Automate revenue collection and finance</p>
+                                    </div>
+                                </div></a>
+                                <div class="row-span-1 rounded-md p-1  hover:bg-neutral-100"><a href="#bankingSection" class="h-[100%]">
+                                    <div >
+                                        <p class="text-neutral-900 text-md font-semibold">Banking-as-a-Service</p>
+                                        <p class="text-neutral-500 font-medium text-sm text-justify">Embed financial services in your platform or product</p>
+                                    </div>
+                                </div></a>
+                            </div>
+                            <div id="productSideDiv" class="grid grid-cols-2 h-[430px] my-auto overflow-y-scroll col-span-2 rounded-lg bg-neutral-100 py-10 snap-mandatory snap-y" style="scroll-behavior: smooth;">
+                                <!-- global section -->
+                                <div id="globalSection" class="grid grid-cols-2 col-span-2 rounded-lg p-1 bg-neutral-100 py-10 h-[432px] snap-center">
+                                    <div class="grid grid-cols-1 grid-rows-6 p-1 col-span-1 gap-y-4">
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-fuchsia-500 text-2xl text-center translate-y-1">
+                                                <i class="fa-solid fa-layer-group"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Payments</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Online Payments</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-cyan-500 text-2xl text-center translate-y-1">
+                                                <i class="fa-solid fa-money-check"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Checkout</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Pre-built payments page.</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-indigo-500 text-2xl text-center translate-y-1">
+                                                <i class="fa-brands fa-uikit"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Elements</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Customizable payment UIs</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-violet-600 text-2xl text-center translate-y-1">
+                                                <i class="fa-brands fa-staylinked"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Payment Link</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">No Code Payments</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-red-600 text-2xl text-center translate-y-1">
+                                                <i class="fa-solid fa-satellite-dish"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Radar</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Fraud And Risk Management</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-cyan-500 text-2xl text-center translate-y-1">
+                                                <i class="fa-solid fa-globe"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Connect</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Payment for platforms</p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="grid grid-cols-1 grid-rows-6 p-1 col-span-1 gap-y-4">
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-yellow-400 text-2xl text-center translate-y-1">
+                                                <i class="fa-solid fa-file-invoice"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Billing</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Subscription Management</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-violet-400 text-2xl text-center translate-y-1">
+                                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Invoicing</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Online Invoices</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-green-400 text-2xl text-center translate-y-1">
+                                                <i class="fa-solid fa-user-tie"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Terminal</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">In Person payments</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-violet-600 text-2xl text-center translate-y-1">
+                                                <i class="fa-brands fa-connectdevelop"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Financial Connections</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Linked Financial Data</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-cyan-500 text-2xl text-center translate-y-1">
+                                                <i class="fa-solid fa-id-card"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Identity</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Online Identity Verification</p>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <!-- revenue section -->
+                                <div id="revenueSection" class="grid grid-cols-2 col-span-2 rounded-lg p-1 bg-neutral-100 py-10 h-[432px] snap-center">
+                                    <div class="grid grid-cols-1 grid-rows-6 p-1 col-span-1 gap-y-4">
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-yellow-400 text-2xl text-center translate-y-1">
+                                                <i class="fa-solid fa-file-invoice"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Billing</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Subscription Management</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-violet-400 text-2xl text-center translate-y-1">
+                                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Invoicing</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Online Invoices</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-fuchsia-500 text-2xl text-center translate-y-1">
+                                                <i class="fa-solid fa-chart-pie"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">TAX</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Sales Tax And Vat automation</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-cyan-500 text-2xl text-center translate-y-1">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Revenue Recognition</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Accounting Automation</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-1 grid-rows-6 p-1 col-span-1 gap-y-4">
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-orange-500 text-2xl text-center translate-y-1">
+                                                <i class="fa-brands fa-pied-piper"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Sigma</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Custom Reports</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-violet-600 text-2xl text-center translate-y-1">
+                                                <i class="fa-solid fa-timeline"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Data Pipeline</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Data Management warehouse sync.</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-orange-600 text-2xl text-center translate-y-1">
+                                                <i class="fa-brands fa-atlassian"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Atlas</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Startup Incorporation</p>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-green-600 text-2xl text-center translate-y-1">
+                                                <i class="fa-solid fa-earth-asia"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Climate</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Carbon Removal</p>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <!-- banking as a service option -->
+                                <div id="bankingSection" class="grid grid-cols-2 col-span-2 rounded-lg p-1 bg-neutral-100 py-10 h-[432px] snap-center">
+                                    <div class="grid grid-cols-1 grid-rows-6 p-1 col-span-1 gap-y-4">
+                                        <div class="grid grid-cols-5 cursor-pointer">
+                                            <div class="col-span-1 text-cyan-500 text-2xl text-center translate-y-1">
+                                                <i class="fa-solid fa-globe"></i>
+                                            </div>
+                                            <div class="col-span-4 ">
+                                                <p class="text-md font-semibold text-neutral-900  peer inline">Connect</p> <span class="text-neutral-100 peer-hover:text-neutral-900 duration-200"><i class="fa-solid fa-arrow-right"></i></span>
+                                                <p class="text-sm font-semibold text-neutral-500 peer-hover:text-neutral-900 duration-200">Payment for platforms</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <li><a href="">Solutions</a></li>
+                        <li><a href="">Developers</a></li>
+                        <li><a href="">Resources</a></li>
+                        <li><a href="">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="w-[20%] h-[100%] flex text-right"><a href="" class="ml-auto"><button id="signBtn" class="px-2 py-1 rounded-full text-lg font-semibold ">Sign In</button></a></div>
+                <!-- products pop up -->
+                
+                
+            </div>
+
+
+        </div>
+        
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    </body>
+</html>
