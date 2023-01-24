@@ -20,11 +20,11 @@
             </div>
             <div id="pcNavbar" class="w-[100vw] flex justify-between px-20 py-4 text-white">
                 <div class="w-[20%] h-[100%] text-3xl font-bold tracking-wide flex items-center -translate-y-1">stripe</div>
-                <div class="w-[40%]">
+                <div class="w-[50%]">
                     <ul class="flex w-[100%] h-[100%] justify-between text-lg font-semibold items-center">
                         <li id="productsLink" class="cursor-pointer hover:text-neutral-400">Products</li>
                         <!-- product popup -->
-                        <div id="productsPopUp" class="grid grid-cols-3 bg-neutral-200 rounded-lg absolute z-10 top-20 left-40 w-[70vw] p-1 popUpInit">
+                        <div id="productsPopUp" class="grid grid-cols-3 bg-neutral-200 rounded-lg absolute z-10 top-20 left-40 w-[70vw] p-1 popUpInit h-[440px]">
                             <div class="grid grid-cols-1 grid-rows-5 p-1 col-span-1 rounded-lg gap-y-1">
                                 <div class="row-span-1 rounded-md p-1  hover:bg-neutral-100"><a href="#globalSection" class="h-[100%]">
                                     <div>
@@ -45,7 +45,7 @@
                                     </div>
                                 </div></a>
                             </div>
-                            <div id="productSideDiv" class="grid grid-cols-2 h-[430px] my-auto overflow-y-scroll col-span-2 rounded-lg bg-neutral-100 py-10 snap-mandatory snap-y" style="scroll-behavior: smooth;">
+                            <div id="productSideDiv" class="grid grid-cols-2 h-[432px] overflow-y-scroll col-span-2 rounded-lg bg-neutral-100 py-10 snap-mandatory snap-y" style="scroll-behavior: smooth;">
                                 <!-- global section -->
                                 <div id="globalSection" class="grid grid-cols-2 col-span-2 rounded-lg p-1 bg-neutral-100 py-10 h-[432px] snap-center">
                                     <div class="grid grid-cols-1 grid-rows-6 p-1 col-span-1 gap-y-4">
@@ -328,8 +328,40 @@
                                 </div>
                             </div>
                         </div>
-                        <li><a href="">Resources</a></li>
-                        <li><a href="">Pricing</a></li>
+                        <li id="resourceLink" class="cursor-pointer hover:text-neutral-400">Resources</li>
+                        <!-- resources Pop up -->
+                        <div id="resourcePopUp" class="grid grid-cols-1 grid-rows-5 gap-y-2 bg-neutral-200 rounded-lg absolute z-10 top-20 left-96 translate-x-20 w-[40vw] p-2 shadow-lg shadow-neutral-700/50 popUpInit">
+                            <div class="row-span-3 bg-neutral-100 p-2 rounded-lg shadow-lg shadow-neutral-700/20 ">
+                                <div class="grid grid-cols-2 p-4">
+                                    <div class="grid grid-cols-1 col-span-1 grid-rows-4 gap-y-4 mb-4">
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Support Center</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-life-ring"></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Support Plans</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-tag"></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Guides</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-paste"></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Customer Stories</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-building-user"></i></span></div>
+
+                                    </div>
+                                    <div class="grid grid-cols-1 col-span-1 grid-rows-4 gap-y-4 mb-4">
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Blog</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-pen-nib"></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Annual Conference</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-calendar"></i></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Contact Sales</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-comments"></i></span></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-span-2 bg-neutral-100 p-2 rounded-lg shadow-lg shadow-neutral-700/20">
+                                <div class="grid grid-cols-2 px-4 py-4">
+                                    <div class="grid grid-cols-1 col-span-1 grid-rows-2 gap-y-4 mb-4">
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Jobs</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-briefcase"></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Newsroom</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-newspaper"></i></span></div>
+                                    </div>
+                                    <div class="grid grid-cols-1 col-span-1 grid-rows-2 gap-y-4 mb-4">
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Stripe press</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-book-open"></i></span></div>
+                                        <div class="flex flex-row-reverse justify-end text-sm"><span class="peer text-neutral-800"><a href="">Become a Partner</a></span><span class="text-blue-200 peer-hover:text-neutral-500 duration-200 mr-2"><i class="fa-solid fa-medal"></i></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <li class="cursor-pointer hover:text-neutral-400"><a href="">Pricing</a></li>
                     </ul>
                 </div>
                 <div class="w-[20%] h-[100%] flex text-right"><a href="" class="ml-auto"><button id="signBtn" class="px-2 py-1 rounded-full text-lg font-semibold ">Sign In</button></a></div>
@@ -337,6 +369,14 @@
                 
                 
             </div>
+            <div id="hero" class="absolute z-0 top-[40vh] left-28">
+                <p class="text-6xl font-semibold tracking-wide">Made With <span id="effectDisplay"></span><span id="bar" class="font-light">|</span></p>
+                <p class="text-8xl font-semibold tracking-wide"><span class="text-6xl">By</span> <a href="https://rgsocials.netlify.app/" target="_blank" class="hover:text-fuchsia-400 duration-200">Ritik Gupta</a></p>
+            </div>
+            <a href="https://rgsocials.netlify.app/" target="_blank" class="absolute w-[300px] h-[500px] top-28 right-6 hover:scale-105 duration-100 ">
+                <div id="mobi" class="absolute w-[100%] h-[100%]  right-6 "></div>
+
+            </a>
 
 
         </div>
@@ -346,6 +386,8 @@
         <script src="/src/js/productPop.js" async defer></script>
         <script src="/src/js/solutionPop.js" async defer></script>
         <script src="/src/js/developerPop.js" async defer></script>
+        <script src="/src/js/resourcesPop.js" async defer></script>
+        <script src="/src/js/heroSection.js" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     </body>
 </html>
